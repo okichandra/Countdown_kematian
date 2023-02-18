@@ -43,3 +43,22 @@ const func = () => {
         }
     }, 1000);
 }
+
+//Validasi waktu
+
+const darkModeTime = [18,19,20,21,22,23,24,1,2,3,4,5,6]
+let isDarkMode = false // mode default adalah lightmode
+const background = document.getElementById("background")
+const changeButton = document.getElementById("ModeChanger")
+
+//auto Mode
+for(let time of darkModeTime) {
+    if(time.getHours == darkModeTime)
+        background.style.backgroundColor = '#f1f1f1'
+    else bacground.style.backgroundColor = 'white'
+}
+
+changeButton.addEventListener('click', () => {
+    if(isDarkMode) isDarkMode = true
+    else isDarkMode = false
+})
